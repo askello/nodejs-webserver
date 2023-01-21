@@ -5,7 +5,7 @@ Battle-tested web server which:
 2. Executes custom functions (controllers) on defined routes
 3. Is protected by username/password (BasicAuth)
 
-Why this server is good:
+Why this web server is good:
 1. Zero dependencies (only native nodejs code)
 2. Easy to understand (there is very little code inside)
 3. Written in asynchronous way (by-by callback-hell)
