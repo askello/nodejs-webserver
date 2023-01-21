@@ -2,10 +2,7 @@ module.exports = {
 
     check: function(req, res) {
 
-        // disable auth for local env
-        // if (req.headers.host && req.headers.host.startsWith('127.0.0.1')) {
-        //     return true;
-        // }
+        if (this.except(req)) return true;
 
         let [username, password] = this.getUserCredentials(req);
 
@@ -21,6 +18,19 @@ module.exports = {
         }
 
         return true;
+    },
+
+    except: function(req) {
+        // disable auth for local env
+        // if (req.headers.host && req.headers.host.startsWith('127.0.0.1')) {
+        //     return true;
+        // }
+
+        if (req.path == '/healthcheck') {
+            return true;
+        }
+
+        return false;
     },
 
     getUserCredentials: function(req) {
