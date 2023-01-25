@@ -1,8 +1,8 @@
 
 // set env variables
-process.env.PORT = 80;
+process.env.PORT = 8080;
 process.env.BASIC_AUTH_USER = 'admin';
-process.env.BASIC_AUTH_PASSWORD = '12345';
+process.env.BASIC_AUTH_PASSWORD = 'admin';
 
 // start webserver
 const server = require('./webserver/server');
