@@ -26,7 +26,7 @@ function readFormParams(form) {
 }
 
 function displayResponse(response) {
-    response.text().then(text => {
-        document.querySelector('#response').innerText = text;
+    response.json().then(json => {
+        document.querySelector('#response').innerText = JSON.stringify(json, null, 4);
     });
 }
